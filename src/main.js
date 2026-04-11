@@ -1,6 +1,14 @@
-import Vue from "vue";
-import App from "./App.vue";
+import Vue from 'vue';
+import singleSpaVue from 'single-spa-vue';
+import MediaApp from './MediaApp.vue';
 
-new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
+const vueLifecycles = singleSpaVue({
+  Vue,
+  appOptions: {
+    render(h) {
+      return h(MediaApp);
+    },
+  },
+});
+
+export const { bootstrap, mount, unmount } = vueLifecycles;
