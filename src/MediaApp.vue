@@ -2,14 +2,13 @@
   <div class="animate-in">
     <header style="margin-bottom: 2rem;">
       <h2 class="vibrant-text" style="font-size: 2rem;">Media Library</h2>
-      <p style="color: var(--text-muted);">Manage your digital assets and media files</p>
+      <p style="color: var(--text-muted);">Manage your digital assets (Vue + TS)</p>
     </header>
 
     <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
       <button class="glass-btn active">All Media</button>
       <button class="glass-btn">Images</button>
       <button class="glass-btn">Videos</button>
-      <button class="glass-btn">Documents</button>
       <button class="glass-btn" style="margin-left: auto; background: var(--primary); border-color: var(--primary);">
         <span>+</span> Upload New
       </button>
@@ -33,15 +32,17 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
   name: 'MediaApp',
   data() {
     return {
-      hover: null
+      hover: null as number | null
     }
   }
-}
+});
 </script>
 
 <style scoped>
