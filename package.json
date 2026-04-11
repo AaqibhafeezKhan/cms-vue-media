@@ -12,7 +12,6 @@
     "vuetify": "^2.4.0"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.5.11",
-    "webpack-module-federation-plugin": "^0.0.3"
+    "@vue/cli-service": "^4.5.11"
   }
 }
