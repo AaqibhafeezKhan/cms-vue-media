@@ -12,6 +12,9 @@
     "vuetify": "^2.4.0"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.5.11"
+    "@vue/cli-service": "^4.5.11",
+    "typescript": "^4.0.0",
+    "@vue/cli-plugin-typescript": "^4.5.11",
+    "@types/single-spa-vue": "^2.1.0"
   }
 }
