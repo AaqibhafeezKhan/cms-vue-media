@@ -1,9 +1,9 @@
 <template>
   <div class="animate-in">
-    <header style="margin-bottom: 3rem; display: flex; justify-content: space-between; align-items: center;">
+    <header style="margin-bottom: 3.5rem; display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px solid var(--border); padding-bottom: 2rem;">
       <div>
-        <h2 style="font-size: 2rem; font-weight: 900; color: var(--primary); letter-spacing: -0.03em;">Media Library</h2>
-        <p style="color: var(--text-muted); font-size: 0.95rem; font-weight: 500;">Digital asset repository and delivery network</p>
+        <h2 style="font-size: 2.5rem; font-weight: 900; color: var(--primary); letter-spacing: -0.04em; margin-bottom: 0.5rem;">Media Library</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; font-weight: 500;">Manage and distribute global digital assets</p>
       </div>
       <div style="display: flex; gap: 1rem;">
         <input 
@@ -15,11 +15,11 @@
         >
         <button 
           @click="$refs.fileInput.click()" 
-          style="background: var(--primary-gradient); color: white; border: none; padding: 0.75rem 1.75rem; border-radius: var(--radius); cursor: pointer; font-weight: 700; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2); transition: transform 0.2s;"
-          onmouseover="this.style.transform='translateY(-2px)'"
-          onmouseout="this.style.transform='translateY(0)'"
+          style="background: var(--primary-gradient); color: white; border: none; padding: 0.85rem 2rem; border-radius: 12px; cursor: pointer; font-weight: 700; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; gap: 0.5rem;"
+          onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(79, 70, 229, 0.3)';"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(79, 70, 229, 0.2)';"
         >
-          Upload Asset
+          <span>↑</span> Upload Asset
         </button>
       </div>
     </header>
@@ -91,9 +91,10 @@ export default {
         this.assets = JSON.parse(saved);
       } else {
         const initial: Asset[] = [
-          { id: 1, name: 'architecture_diagram.jpg', url: 'https://picsum.photos/seed/cms1/800/600', size: '1.2MB', type: 'image/jpeg' },
-          { id: 2, name: 'team_retreat_2026.jpg', url: 'https://picsum.photos/seed/cms2/800/600', size: '2.4MB', type: 'image/jpeg' },
-          { id: 3, name: 'product_shot_01.png', url: 'https://picsum.photos/seed/cms3/800/600', size: '800KB', type: 'image/png' }
+          { id: 1, name: 'modern_workspace.jpg', url: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800', size: '1.4MB', type: 'image/jpeg' },
+          { id: 2, name: 'abstract_design_system.jpg', url: 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800', size: '2.1MB', type: 'image/jpeg' },
+          { id: 3, name: 'server_infrastructure.jpg', url: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=800', size: '3.2MB', type: 'image/jpeg' },
+          { id: 4, name: 'team_collaboration.jpg', url: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800', size: '1.8MB', type: 'image/jpeg' }
         ];
         this.assets = initial;
         this.saveAssets();
