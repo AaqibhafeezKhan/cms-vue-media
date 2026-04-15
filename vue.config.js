@@ -14,6 +14,7 @@ module.exports = {
     config.plugins.delete('html');
     config.plugins.delete('preload');
     config.plugins.delete('prefetch');
+    config.externals(['vue', 'single-spa-vue']);
   },
   css: { extract: false },
   publicPath: process.env.NODE_ENV === 'production'
