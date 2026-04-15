@@ -1,20 +1,26 @@
 {
   "name": "cms-vue-media",
   "version": "1.0.0",
-  "description": "Vue.js microfrontend for media library",
+  "description": "Vue.js microfrontend for media library and digital asset management",
+  "homepage": "https://AaqibhafeezKhan.github.io/cms-vue-media",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "start": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "single-spa-vue": "^2.3.0",
     "vue": "^2.6.12",
-    "vue-router": "^3.2.0",
-    "vuetify": "^2.4.0"
+    "vue-router": "^3.2.0"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.5.11",
-    "typescript": "^4.0.0",
+    "@vue/cli-plugin-babel": "^4.5.11",
     "@vue/cli-plugin-typescript": "^4.5.11",
-    "@types/single-spa-vue": "^2.1.0"
+    "@vue/cli-service": "^4.5.11",
+    "@types/single-spa-vue": "^2.1.0",
+    "gh-pages": "^6.2.0",
+    "typescript": "^4.0.0",
+    "vue-template-compiler": "^2.6.12"
   }
 }
