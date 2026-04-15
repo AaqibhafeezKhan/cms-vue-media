@@ -56,8 +56,6 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-
 interface Asset {
   id: number;
   name: string;
@@ -68,7 +66,7 @@ interface Asset {
 
 const STORAGE_KEY = 'cms_assets';
 
-export default Vue.extend({
+export default {
   name: 'MediaApp',
   data() {
     return {
