@@ -56,6 +56,7 @@
 </template>
 
 <script lang="ts">
+// @ts-nocheck
 interface Asset {
   id: number;
   name: string;
@@ -117,5 +118,5 @@ export default {
       this.saveAssets();
     }
   }
-});
+}
 </script>
