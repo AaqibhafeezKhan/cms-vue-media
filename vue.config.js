@@ -1,8 +1,22 @@
 module.exports = {
-  chainWebpack: (config) => {
-    config.devServer.set('port', 8082);
-    config.externals(['vue', 'vue-router']);
-    config.output.libraryTarget('system');
-  },
+  outputDir: 'dist',
   filenameHashing: false,
+  chainWebpack: (config) => {
+    config.devServer
+      .port(8082)
+      .headers({ 'Access-Control-Allow-Origin': '*' });
+
+    config.output
+      .filename('main.js')
+      .libraryTarget('system');
+
+    config.optimization.delete('splitChunks');
+    config.plugins.delete('html');
+    config.plugins.delete('preload');
+    config.plugins.delete('prefetch');
+  },
+  css: { extract: false },
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/cms-vue-media/'
+    : '/',
 };
