@@ -11,7 +11,7 @@ module.exports = {
       .libraryTarget('amd');
 
     config.optimization.delete('splitChunks');
-    config.plugins.delete('html');
+
     config.plugins.delete('preload');
     config.plugins.delete('prefetch');
     config.externals(['vue', 'single-spa-vue']);
