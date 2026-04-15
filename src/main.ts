@@ -5,7 +5,7 @@ import MediaApp from './MediaApp.vue';
 const vueLifecycles = singleSpaVue({
   Vue,
   appOptions: {
-    render(h) {
+    render(h: any) {
       return h(MediaApp);
     },
   },
