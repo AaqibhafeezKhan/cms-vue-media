@@ -59,8 +59,29 @@
       <p style="color: var(--text-muted);">Start by uploading your first digital asset.</p>
     </div>
   </div>
-
 </template>
+
+<style scoped>
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  p {
+    font-size: 0.95rem !important;
+  }
+
+  .module-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
 
 <script lang="ts">
 // @ts-nocheck
