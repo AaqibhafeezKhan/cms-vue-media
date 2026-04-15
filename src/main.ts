@@ -1,6 +1,8 @@
 import Vue from 'vue';
-import singleSpaVue from 'single-spa-vue';
+import singleSpaVueModule from 'single-spa-vue';
 import MediaApp from './MediaApp.vue';
+
+const singleSpaVue = (singleSpaVueModule as any).default || singleSpaVueModule;
 
 const vueLifecycles = singleSpaVue({
   Vue,
