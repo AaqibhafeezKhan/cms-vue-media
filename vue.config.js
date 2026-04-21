@@ -8,7 +8,7 @@ module.exports = {
 
     config.output
       .filename('main.js')
-      .libraryTarget('amd');
+      .libraryTarget('system');
 
     config.optimization.delete('splitChunks');
 
